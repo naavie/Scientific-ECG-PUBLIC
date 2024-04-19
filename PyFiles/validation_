@@ -1,0 +1,32 @@
+def valid_epoch(model, loader, classes):
+    model.eval()
+
+    with torch.no_grad():
+        class_embeddings = model.text_to_embeddings(classes).detach().cpu()
+
+    tqdm_object = tqdm(loader, total=len(loader))
+    embeddings = list()
+    captions = list()
+    with torch.no_grad():
+        for batch in tqdm_object:
+            batch = {k: v.to(CONFIG.device) if isinstance(v, torch.Tensor) else v for k, v in batch.items()}
+            loss, image_embeddings, text_embeddings = model(batch)
+            embeddings.append(image_embeddings.cpu())
+            captions += batch['caption']
+
+    embeddings = torch.cat(embeddings)
+
+#     plt.figure(figsize=(30, 5))
+#     plt.hist(class_embeddings.numpy().flatten(), bins=100)
+#     plt.grid()
+#     plt.show()
+
+
+#     plt.figure(figsize=(30, 5))
+#     plt.hist(embeddings.numpy().flatten(), bins=100)
+#     plt.grid()
+#     plt.show()
+
+
+    metric = calc_metrics(embeddings, captions, class_embeddings, classes)
+    return metric
