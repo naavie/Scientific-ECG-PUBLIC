@@ -1,0 +1,55 @@
+Name,Value_Counts
+1st degree av block,247
+2nd degree av block,8
+atrial bigeminy,3
+atrial fibrillation,1780
+atrial flutter,445
+atrial tachycardia,121
+atrioventricular  node reentrant tachycardia,16
+atrioventricular reentrant tachycardia,8
+av block,166
+clockwise rotation,76
+complete heart block,1
+countercolockwise rotation,162
+early repolarization,22
+fqrs wave,3
+fusion beats,2
+junctional escape,15
+junctional premature complex,1
+left axis deviation,382
+left bundle branch block,205
+left ventricular high voltage,1295
+left ventricular hypertrophy,15
+low qrs voltages,249
+mobitz type i wenckebach atrioventricular block,6
+myocardial infarction,40
+nonspecific intraventricular conduction disorder,235
+nonspecific st t abnormality,1158
+p wave change,95
+premature atrial contraction,258
+prolonged pr interval,12
+prolonged qt interval,57
+qwave abnormal,235
+right atrial  high voltage,8
+right atrial hypertrophy,3
+right axis deviation,215
+right bundle branch block,454
+right ventricular hypertrophy,4
+sinus atrium to atrial wandering rhythm,7
+sinus bradycardia,3889
+sinus rhythm,1826
+sinus tachycardia,1568
+st depression,402
+st elevation,176
+st interval abnormal,2
+supraventricular tachycardia,587
+t wave abnormal,1876
+t wave inversion,157
+u wave abnormal,22
+ventricular bigeminy,3
+ventricular escape beat,7
+ventricular pre excitation,12
+ventricular premature beats,294
+ventricular trigeminy,8
+wandering atrial pacemaker,2
+wolff parkinson white pattern,4

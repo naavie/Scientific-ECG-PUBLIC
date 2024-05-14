@@ -1,0 +1,61 @@
+Name,Value_Counts
+1st degree av block,797
+2nd degree av block,14
+abnormal QRS,3389
+anterior ischemia,44
+anterior myocardial infarction,354
+atrial fibrillation,1529
+atrial flutter,74
+bundle branch block,20
+cardiac dysrhythmia,16
+complete heart block,16
+complete right bundle branch block,542
+congenital incomplete atrioventricular heart block,2
+coronary heart disease,21
+heart failure,7
+heart valve disorder,6
+incomplete left bundle branch block,77
+incomplete right bundle branch block,1118
+indeterminate cardiac axis,156
+inferior ischaemia,219
+lateral ischaemia,142
+left anterior fascicular block,1626
+left atrial enlargement,427
+left axis deviation,5146
+left bundle branch block,536
+left posterior fascicular block,177
+left ventricular hypertrophy,2359
+low qrs voltages,182
+myocardial infarction,5628
+myocardial ischemia,2175
+nonspecific intraventricular conduction disorder,789
+nonspecific st t abnormality,381
+pacing rhythm,296
+paroxysmal atrial fibrillation,1
+paroxysmal supraventricular tachycardia,24
+premature atrial contraction,398
+prolonged pr interval,340
+prolonged qt interval,118
+qwave abnormal,548
+rapid atrial fibrillation,2
+right atrial hypertrophy,99
+right axis deviation,343
+right ventricular hypertrophy,126
+s t changes,770
+sinus arrhythmia,772
+sinus bradycardia,637
+sinus rhythm,18172
+sinus tachycardia,827
+st depression,1009
+st elevation,28
+supraventricular premature beats,157
+supraventricular tachycardia,27
+t wave abnormal,2345
+t wave inversion,294
+ventricular bigeminy,82
+ventricular ectopics,1154
+ventricular fibrillation,24
+ventricular hypertrophy,43
+ventricular tachycardia,10
+ventricular trigeminy,20
+wolff parkinson white pattern,82

@@ -1,0 +1,81 @@
+Name,Value_Counts
+1st degree av block,893
+2nd degree av block,58
+accelerated atrial escape rhythm,16
+accelerated idioventricular rhythm,14
+accelerated junctional rhythm,12
+acute myocardial infarction,49
+anterior myocardial infarction,57
+atrial escape beat,17
+atrial flutter,7615
+atrial rhythm,215
+atrial tachycardia,176
+atrioventricular dissociation,59
+atrioventricular junctional rhythm,139
+atrioventricular reentrant tachycardia,18
+av block,78
+blocked premature atrial contraction,62
+bradycardia,7
+brugada,5
+bundle branch block,385
+clockwise or counterclockwise vectorcardiographic loop,653
+complete heart block,75
+complete left bundle branch block,213
+complete right bundle branch block,1096
+decreased qt interval,2
+early repolarization,344
+fusion beats,114
+incomplete left bundle branch block,6
+incomplete right bundle branch block,246
+junctional escape,60
+junctional premature complex,10
+junctional tachycardia,24
+left anterior fascicular block,380
+left atrial enlargement,1
+left atrial hypertrophy,8
+left axis deviation,1163
+left bundle branch block,35
+left posterior fascicular block,5
+left ventricular high voltage,4106
+left ventricular hypertrophy,632
+low qrs voltages,794
+mobitz type II atrioventricular block,7
+mobitz type i wenckebach atrioventricular block,25
+myocardial infarction,83
+nonspecific intraventricular conduction disorder,536
+p wave change,47
+pacing rhythm,1182
+paroxysmal ventricular tachycardia,109
+poor R wave Progression,638
+premature atrial contraction,1054
+premature ventricular contractions,1091
+prolonged P wave,106
+prolonged pr interval,40
+prolonged qt interval,337
+qwave abnormal,828
+right atrial  high voltage,28
+right atrial hypertrophy,33
+right axis deviation,638
+right bundle branch block,195
+right ventricular hypertrophy,106
+s t changes,4232
+shortened pr interval,23
+sinoatrial block,5
+sinus arrest,33
+sinus arrhythmia,2550
+sinus bradycardia,12670
+sinus rhythm,6299
+sinus tachycardia,5687
+st depression,1266
+st interval abnormal,799
+supraventricular premature beats,9
+supraventricular tachycardia,137
+t wave abnormal,5167
+t wave inversion,2720
+tall p wave,215
+u wave abnormal,114
+ventricular escape beat,49
+ventricular escape rhythm,96
+ventricular fibrillation,59
+ventricular flutter,7
+wolff parkinson white pattern,68
