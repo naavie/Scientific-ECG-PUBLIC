@@ -2,9 +2,12 @@ import torch
 from torch import nn
 
 # Dataframes for PTB-XL
-# Train
-# Validation
-# Test
+# Train: https://github.com/naavie/Scientific-ECG-PUBLIC/blob/main/train_subset.csv
+# Validation: https://github.com/naavie/Scientific-ECG-PUBLIC/blob/main/validation_subset.csv
+# Test: https://github.com/naavie/Scientific-ECG-PUBLIC/blob/main/test_subset.csv (excluded classes only for CLIP evaluation)
+# ECG Signal Data: https://drive.google.com/file/d/1wqHbp6_DJZkIseMAdtySNSZ_ug9DQwr2/view?usp=sharing
+
+# For training and evaluation of Image Encoders only, split Train DataFrame into train and validation subsets and use the validation subset for evaluation..
 
 # AlexNet
 class AlexNetECG(nn.Module):
