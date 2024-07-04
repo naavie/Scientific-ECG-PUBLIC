@@ -229,3 +229,75 @@ class ImageEncoder(nn.Module):
     def forward(self, x):
         x = self.encoder(x)
         return x
+
+# 1D-CNN with Attention
+class SelfAttention(nn.Module):
+    def __init__(self, input_dim):
+        super(SelfAttention, self).__init__()
+        self.query = nn.Linear(input_dim, input_dim)
+        self.key = nn.Linear(input_dim, input_dim)
+        self.value = nn.Linear(input_dim, input_dim)
+
+    def forward(self, x):
+        # x shape: (batch_size, seq_len, input_dim)
+        Q = self.query(x)
+        K = self.key(x)
+        V = self.value(x)
+
+        attention_scores = torch.matmul(Q, K.transpose(-2, -1)) / (x.size(-1) ** 0.5)
+        attention_weights = F.softmax(attention_scores, dim=-1)
+
+        output = torch.matmul(attention_weights, V)
+        return output
+
+class ECGEncoder1D(nn.Module):
+    def __init__(self, num_classes=80):
+        super(ECGEncoder1D, self).__init__()
+
+        # 1D Convolutional layers
+        self.conv1 = nn.Conv1d(12, 32, kernel_size=7, stride=2, padding=3)
+        self.bn1 = nn.BatchNorm1d(32)
+        self.conv2 = nn.Conv1d(32, 64, kernel_size=7, stride=2, padding=3)
+        self.bn2 = nn.BatchNorm1d(64)
+        self.conv3 = nn.Conv1d(64, 128, kernel_size=7, stride=2, padding=3)
+        self.bn3 = nn.BatchNorm1d(128)
+        self.conv4 = nn.Conv1d(128, 256, kernel_size=7, stride=2, padding=3)
+        self.bn4 = nn.BatchNorm1d(256)
+
+        self.attention = SelfAttention(256)
+
+        # Global Average Pooling
+        self.global_avg_pool = nn.AdaptiveAvgPool1d(1)
+
+        # Fully connected layers
+        self.fc1 = nn.Linear(256, 512)
+        self.fc2 = nn.Linear(512, num_classes)
+
+        # Dropout for regularization
+        self.dropout = nn.Dropout(0.5)
+
+    def forward(self, x):
+        # Convolutional layers with ReLU activation and max pooling
+        x = F.relu(self.bn1(self.conv1(x)))
+        x = F.max_pool1d(x, 2)
+        x = F.relu(self.bn2(self.conv2(x)))
+        x = F.max_pool1d(x, 2)
+        x = F.relu(self.bn3(self.conv3(x)))
+        x = F.max_pool1d(x, 2)
+        x = F.relu(self.bn4(self.conv4(x)))
+
+        # Apply attention
+        x = x.permute(0, 2, 1)  # Change shape to (batch_size, seq_len, channels)
+        x = self.attention(x)
+        x = x.permute(0, 2, 1)  # Change shape back to (batch_size, channels, seq_len)
+
+        # Global Average Pooling
+        x = self.global_avg_pool(x)
+        x = x.view(x.size(0), -1)
+
+        # Fully connected layers with ReLU activation and dropout
+        x = F.relu(self.fc1(x))
+        x = self.dropout(x)
+        x = self.fc2(x)
+
+        return x
