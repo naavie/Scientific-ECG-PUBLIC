@@ -231,6 +231,8 @@ class ImageEncoder(nn.Module):
         return x
 
 # 1D-CNN with Attention
+# Ningbo Dataset: https://drive.google.com/file/d/1Wyvwx0QZC1TI6WBpge_RuDsb6qGQCvDR/view?usp=sharing
+# Jupyter Notebook (Training/Validation/Testing): https://drive.google.com/file/d/1J65VkMe7eivG2tNdfL8XD2GqjkYXjPGu/view?usp=sharing
 class SelfAttention(nn.Module):
     def __init__(self, input_dim):
         super(SelfAttention, self).__init__()
